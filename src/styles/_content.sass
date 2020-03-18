@@ -1,7 +1,23 @@
-.container
-    padding: $big-gutter * 2 0
-    width: 90%
-    margin: 0 auto
-    display: flex
-    justify-content: space-between
-    flex-direction: column
+.products
+    padding: $gutter
+    display: grid
+    grid-template-columns: 1fr
+    grid-gap: $gutter
+    .product
+        background: $green
+        text-align: center
+        &__image
+            height: 300px
+            img
+                height: 90%
+        .product__info
+            .price
+                &__amount
+                    font-size: 1.5rem
+                span
+                    font-size: .8rem
+        .btn
+            background: $red
+            border: none
+            border-radius: 5px
+            padding: .5rem 1rem

@@ -2,12 +2,12 @@ import React from 'react';
 
 import Product from './Product';
 
-export default function Products() {
+export default function Products(props) {
 	return (
 		<section className="products">
-			<Product />
-			<Product />
-			<Product />
+			{props.products.map(product => {
+				return <Product key={product.id} product={product} />;
+			})}
 		</section>
 	);
 }
